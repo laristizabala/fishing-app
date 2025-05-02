@@ -37,14 +37,16 @@
           </p>
         </div>
         <div class="leaderboard-card-body__item">
-          <p class="leaderboard-card-body__rank">
+          <span class="leaderboard-card-body__label">Lv:</span>
+          <p class="leaderboard-card-body__level">
             {{ player.level }}
           </p>
         </div>
         <p class="leaderboard-card-body__text">
-          {{ player.xp }}
+          <span class="leaderboard-card-body__label">xp: </span> {{ player.xp }}
         </p>
         <p class="leaderboard-card-body__text">
+          <span class="leaderboard-card-body__label">Gold: </span>
           {{ player.gold }}
         </p>
       </div>
@@ -140,6 +142,10 @@ onMounted(() => {
   border-bottom: 0.063rem solid $color-gray-hr;
   padding: 0.625rem 0 0.625rem 0.875rem;
   margin: 0.625rem 0;
+  min-width: 0;
+  &__label {
+    display: none;
+  }
   &__text {
     display: flex;
     align-items: center;
@@ -177,6 +183,51 @@ onMounted(() => {
       height: 2.813rem;
       font-size: 1.75rem;
     }
+  }
+  &__level {
+    border: 0.063rem solid $color-primary-background;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.5rem;
+    width: 2.188rem;
+    height: 2.188rem;
+    padding: 0.125rem;
+    margin: 0.125rem;
+    color: $color-primary-background;
+  }
+}
+
+@media (max-width: 550px) {
+  .leaderboard-card-header {
+    display: none;
+  }
+  .leaderboard-card-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    padding: 1rem;
+    text-align: center;
+    border: 0.063rem solid $color-gray-hr;
+    border-radius: 1rem;
+    &__label {
+      display: block;
+      font-weight: 600;
+      color: $color-primary-background;
+      margin-right: 0.188rem;
+    }
+    &__item {
+      flex-direction: column;
+      width: 100%;
+      padding: 0.25rem 0;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .leaderboard-card-body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 </style>
