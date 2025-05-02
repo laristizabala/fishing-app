@@ -27,9 +27,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import IconRank from './icons/IconRank.vue'
 import IconMarket from './icons/IconMarket.vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 
 const navItems = ref([
   { id: '', label: 'Leaderboard' },
@@ -40,6 +43,14 @@ const isActive = ref('')
 const setActive = (id) => {
   isActive.value = id
 }
+
+watch(
+  () => route.name,
+  () => {
+    isActive.value = route?.name === 'market' ? 'market' : ''
+  },
+  { deep: true },
+)
 </script>
 
 <style lang="scss" scoped>
