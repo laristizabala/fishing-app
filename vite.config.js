@@ -14,10 +14,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Mi App Vue Offline',
+        name: 'Fishing App',
         short_name: 'AppOffline',
-        description: 'Mi proyecto Vue 3 que funciona offline',
-        theme_color: '#42b883',
+        description: 'Fishing App offline',
+        theme_color: 'rgb(92, 119, 255)',
         icons: [
           {
             src: 'fishing-192x192.png',
@@ -45,4 +45,11 @@ export default defineConfig({
     },
   },
   base: '/fishing-app',
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@use "@/assets/scss/variables" as *;',
+      },
+    },
+  },
 })

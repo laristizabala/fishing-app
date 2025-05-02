@@ -1,0 +1,25 @@
+//Main colors
+$color-white: var(--vt-c-white);
+$color-primary-background: var(--color-primary-background);
+$color-primary-background-hover: var(--color-primary-background-hover);
+$color-text-light: var(--color-text-light);
+$color-text-dark: var(--color-text-dark);
+$color-text-soft: var(--color-text-soft);
+$color-primary-title: var(--color-primary-title);
+$color-gray-hr: var(--color-gray-hr);
+$color-secondary-background: var(--color-secondary-background);
+
+// Box Shadow
+$box-shadow-form:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+$box-shadow-nav:
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 0 #0000,
+    0 20px 25px -5px #0000001a,
+    0 8px 10px -6px #0000001a;
+
+///****font-family****\\\\
+$font-family: "Montserrat", sans-serif;

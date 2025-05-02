@@ -1,0 +1,37 @@
+:root {
+    --vt-c-white: #ffffff;
+    --vt-c-purple: #5c77ff;
+    --vt-c-purple-dark: #3b50b9;
+    --vt-c-aquamarine: #4aaca9;
+
+    --vt-c-black: rgb(9, 9, 11);
+    --vt-c-gray: rgb(99, 99, 99);
+}
+
+/* semantic color variables for this project */
+:root {
+    --color-primary-background: var(--vt-c-purple);
+    --color-primary-background-hover: var(--vt-c-purple-dark);
+    --color-secondary-background: var(--vt-c-aquamarine);
+    --color-text-light: var(--vt-c-white);
+    --color-text-dark: var(--vt-c-black);
+    --color-text-soft: var(--vt-c-gray);
+    --color-primary-title: var(--vt-c-purple);
+    --color-gray-hr: #cfcfcf;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
