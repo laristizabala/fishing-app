@@ -100,6 +100,7 @@ function nextPage() {
   height: 1.25rem;
   font-size: 0.688rem;
   color: $color-primary-background;
+  cursor: pointer;
   &.active {
     font-weight: bold;
     background-color: $color-primary-background;
@@ -112,6 +113,9 @@ function nextPage() {
     svg {
       fill: $color-text-light;
     }
+  }
+  &:disabled {
+    cursor: default;
   }
 }
 

@@ -122,7 +122,7 @@ onMounted(() => {
     align-items: center;
     justify-content: center;
     color: $color-text-soft;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
 
     &--main {
       font-weight: bold;
